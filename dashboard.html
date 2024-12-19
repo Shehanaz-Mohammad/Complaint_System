@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complaint Form</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    /* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styles */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    margin-right: 20px;
+    display: inline;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav li a:hover {
+    background-color: #555;
+}
+
+/* Container styles */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">RGUKT HOSTEL COMPLAINT SYSTEM</div>
+    <ul class="nav">
+      <li><a href="main1.html" class="nav-link">Home</a></li>
+      <li><a href="#" class="nav-link">Dashboard</a></li>
+      <li><a href="#" class="nav-link">Contacts</a></li>
+      <li><a href="index.php" class="nav-link">Logout</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>Complaint Form</h2>
+    <form id="complaintForm" enctype="multipart/form-data" action="submit_complaint.php" method="post">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="id">ID Number:</label>
+        <input type="text" id="id" name="id" required>
+      </div>
+      <div class="form-group">
+        <label for="number">Phone Number:</label>
+        <input type="text" id="p.no" name="p.no" required>
+      </div>
+      <div class="form-group">
+        <label for="class">Class:</label>
+        <input type="text" id="class" name="class" required>
+      </div>
+      <div class="form-group">
+        <label for="section">Section:</label>
+        <input type="text" id="section" name="section" required>
+      </div>
+      <div class="form-group">
+        <label for="problem">Problem:</label>
+        <textarea id="problem" name="problem" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="solution">Recommended Solution:</label>
+        <textarea id="solution" name="solution" rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="attachment">Attachment:</label>
+        <input type="file" id="attachment" name="attachment">
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
